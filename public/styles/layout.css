@@ -14,12 +14,25 @@ html {
  * Global layout stuff
  */
 
+ 
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: "Source-Sans-Pro"
 }
+ .navbar-logo {
+  font-family: "Bungee", "sans-serif";
+ }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.container {
+  align-content: center;
+  margin: 0 auto;
+  background-color: #f4f1ec;
+  width: 90%;
+ }

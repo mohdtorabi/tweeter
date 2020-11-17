@@ -1,7 +1,6 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
-
+const userHelper    = require("../lib/util/user-helper");
 const express       = require('express');
 const tweetsRoutes  = express.Router();
 
@@ -23,6 +22,10 @@ module.exports = function(DataHelpers) {
       return;
     }
 
+    tweetsRoutes.post("/tweets", (req,res) => {
+      res.render("Hello");
+    });
+
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
@@ -43,4 +46,4 @@ module.exports = function(DataHelpers) {
 
   return tweetsRoutes;
 
-}
+};

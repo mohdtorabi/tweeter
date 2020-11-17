@@ -1,0 +1,18 @@
+header {
+  height: 400px;
+  max-width: 100%;
+  background-color: skyblue;
+  background-image: #00676e;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

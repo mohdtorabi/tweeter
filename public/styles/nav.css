@@ -29,22 +29,12 @@ nav {
   background-color: #d29b30;
 }
 
-.nav-button > span {
+.nav-button span {
   width: 100%;
   color: #FFFFFF;
   margin: 5px 0px 0px 0px;
-  font-weight: normal;
 }
 
-.nav-button > div {
+.nav-button div {
   height: 25px;
-}
-
-.nav-button > div > i {
-  color: red;
-  width: 100%;
-  margin-top: 0px;
-  animation-name: bounce;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
 }

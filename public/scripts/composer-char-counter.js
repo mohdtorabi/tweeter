@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(document).ready(function() {
   $("#tweet-text").keydown(function() {
     const counter = $(this).parent().children().children("output");

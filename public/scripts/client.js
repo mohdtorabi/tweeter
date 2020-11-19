@@ -14,7 +14,7 @@ $(document).ready(function() {
         </header>
         <p class = "tweet-content">${escape(tweet.content.text)}</p>
         <footer> 
-          <span>${tweet.created_at} days ago</span>
+          <span>${getDate(tweet.created_at)} days ago</span>
           <div>
             <button class = "symbols" type="button">&#9873</button>
             <button class = "symbols" type="button">&#9850</button>
@@ -41,7 +41,6 @@ $(document).ready(function() {
       const text = $("#tweet-text").val();
       console.log(text);
       if (text.length === 0) {
-        console.log("1");
         $(".error-container").text("Error: Cannot post an empty tweet");
         $(".error-container").css("border-color", "red");
         
@@ -50,7 +49,6 @@ $(document).ready(function() {
         $(".error-container").css("border-color", "red");
       } else {
         const dataEntry = $(this).serialize();
-        console.log("3");
         $.ajax("/tweets/", {method : 'POST', data: dataEntry})
           .then(() => {
             $("#tweet-text").val("");
@@ -81,6 +79,26 @@ $(document).ready(function() {
   };
 
 });
+
+
+const getDate = (milliseconds) => {
+  const datePosted = new Date(milliseconds);
+  const dateNow = new Date().getTime();
+  const time = Math.abs(dateNow - datePosted);
+  let diff;
+
+  if (time < 1000 * 60) {
+    diff = Math.floor(time / (1000));
+  } else if (time < 1000 * 60 * 60) {
+    diff = Math.floor(time / (1000 * 60));
+  } else if (time < 1000 * 60 * 60 * 24) {
+    diff = Math.floor(time / (1000 * 60 * 60));
+  } else {
+    diff = Math.floor(time / (1000 * 60 * 60 * 60));
+  }
+  
+  return `${diff}`;
+};
 
 
 

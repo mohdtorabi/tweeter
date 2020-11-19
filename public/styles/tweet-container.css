@@ -1,9 +1,10 @@
 article {
-  
   border: solid;
   align-content: center;
   background-color: #f4f1ec;
   padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
 }
 article:hover {
@@ -52,5 +53,12 @@ footer {
 .symbols {
   border: none;
   color: darkblue;
-  cursor: pointer;
+}
+
+.symbols:hover {
+
+text-decoration: none;
+border-bottom: 2px solid;
+padding: 0;
+margin: 0;
 }

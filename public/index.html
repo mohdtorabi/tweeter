@@ -24,38 +24,51 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/new-tweet-toggle.js"></script>
+    <script type="text/javascript" src="/scripts/back-to-top.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav >
+    <nav>
       <span class = "navbar-logo">Tweeter</span>
-      <span>Write a new tweet&#8609;</span>
-      
+      <button class="nav-button">
+        <span><strong>Write</strong> a new tweet&#8609;</span>
+        <div>
+          <i class="down"></i>
+          <i class="up"></i>
+        </div>
+      </button>
     </nav>
-    <header class = "test">
-      <div class= "image">
+    <div class="tweet-page">
+      <header>
+        <div class= "image">
           <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class = "name">
+        </div>
+        <br>
+        <div class = "name">
           <h2>Demi</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="tweet-box">
-        <div class="error-container"></div>
-        <form class = "tweet-form" method = "POST" action = "/tweets/">
-          <label class= "tweet-question" for="tweet-text">What are you humming about?</label>
-          <textarea class = "text-box" name="text" id="tweet-text"></textarea>
-          <div class= "tweet-acc">
-            <button class = "button-tweet" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class ="tweets-container"></section>
-    </main>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="container newTweet">
+          <div class="error-container"></div>
+          <form class = "tweet-form" method = "POST" action = "/tweets/">
+            <label class= "tweet-question" for="tweet-text">What are you humming about?</label>
+            <textarea class = "text-box" name="text" id="tweet-text"></textarea>
+            <div class= "tweet-acc">
+              <button class = "button-tweet" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class ="tweets-container"></section>
+        <button class="back-to-top-button">
+          <i class="up">up</i>
+          <i class="up"></i>
+        </button>
+      </main>
+    </div>
   </body>
 </html>

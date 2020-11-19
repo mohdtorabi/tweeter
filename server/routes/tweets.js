@@ -32,6 +32,7 @@ module.exports = function(DataHelpers) {
       content: {
         text: req.body.text
       },
+      // eslint-disable-next-line camelcase
       created_at: Date.now()
     };
 

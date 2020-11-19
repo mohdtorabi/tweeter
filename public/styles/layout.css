@@ -20,21 +20,63 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source-Sans-Pro"
+  font-family: "Source Sans Pro", sans-serif;
 }
- .navbar-logo {
-  font-family: "Bungee", "sans-serif";
- }
+ 
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+.navbar-logo {
+  font-family: "Bungee", "sans-serif";
+ }
+
+
 .container {
-  align-content: center;
+  align-items: center;
   margin: 0 auto;
   background-color: #f4f1ec;
   width: 90%;
  }
+
+ .back-to-top-button {
+  position: fixed;
+  height: fit-content;
+  bottom: 15px;
+  right: 10px;
+  width: fit-content;
+  border: solid;
+  background-color: magenta;
+}
+
+
+
+ @media only screen and (min-width: 960px) {
+   body nav {
+    background-color: lightseagreen;
+
+   }
+
+   nav .nav-button {
+    background-color: lightseagreen;
+    border-color: lightseagreen;
+   }
+
+   header {
+     margin: 50px;
+   }
+
+   body .tweet-page {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   article {
+     margin-right: 30px;
+   }
+ }
+
+
 
  

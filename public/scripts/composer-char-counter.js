@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 $(document).ready(function() {
-  $("#tweet-text").keydown(function() {
+  $("#tweet-text").on('input', function() {
     const counter = $(this).parent().children().children("output");
     const charCount = $(this).val().length;
     counter.text(140 - charCount);

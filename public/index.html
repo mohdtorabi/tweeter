@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!--Font Style-->
@@ -28,11 +29,11 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav >
-      <span class = "navbar-logo">tweeter</span>
+      <span class = "navbar-logo">Tweeter</span>
       <span>Write a new tweet&#8609;</span>
       
     </nav>
-    <header>
+    <header class = "test">
       <div class= "image">
           <img src="/images/profile-hex.png"> 
       </div>
@@ -44,6 +45,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="tweet-box">
+        <div class="error-container"></div>
         <form class = "tweet-form" method = "POST" action = "/tweets/">
           <label class= "tweet-question" for="tweet-text">What are you humming about?</label>
           <textarea class = "text-box" name="text" id="tweet-text"></textarea>

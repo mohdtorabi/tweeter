@@ -1,10 +1,8 @@
-
-
 article {
+  
   border: solid;
   align-content: center;
   background-color: #f4f1ec;
-  margin-bottom: 1.5em;
   padding: 20px;
 
 }
@@ -21,20 +19,22 @@ article:hover .tweet-account{
 }
 
 
-
 .container-header {
   padding: 10px;
-  height : auto;
+  height: auto;
   background-color: #f4f1ec;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   
 }
+.image-name {
+  display: flex;
+
+}
 
 .header-img {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   padding: 0%;
   margin: 20px;
 }

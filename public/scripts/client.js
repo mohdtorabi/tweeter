@@ -12,7 +12,7 @@ $(document).ready(function() {
           </div>
           <span class="tweet-account">${tweet.user.handle}</span>
         </header>
-        <p class = "tweet-content">${tweet.content.text}</p>
+        <p class = "tweet-content">${escape(tweet.content.text)}</p>
         <footer> 
           <span>${tweet.created_at} days ago</span>
           <div>
@@ -27,8 +27,8 @@ $(document).ready(function() {
   };
   
   const renderTweets = (tweets) => {
+    $(".tweets-container").empty();
     for (const item of tweets) {
-      console.log(item);
       const tweet = createTweetElement(item);
       $(".tweets-container").prepend(tweet);
     }
@@ -37,12 +37,31 @@ $(document).ready(function() {
 
   const submitButton = () => {
     $(".tweet-form").submit(function(event) {
-      const dataEntry = $(this).serialize();
       event.preventDefault();
-      $.ajax("/tweets/", {method : 'POST', data: dataEntry})
-        .then(() => {
-          console.log("this is working");
-        });
+      const text = $("#tweet-text").val();
+      console.log(text);
+      if (text.length === 0) {
+        console.log("1");
+        $(".error-container").text("Error: Cannot post an empty tweet");
+        $(".error-container").css("border-color", "red");
+        
+      } else if (text.length > 140) {
+        $(".error-container").text("Error: Character limit exceeded");
+        $(".error-container").css("border-color", "red");
+      } else {
+        const dataEntry = $(this).serialize();
+        console.log("3");
+        $.ajax("/tweets/", {method : 'POST', data: dataEntry})
+          .then(() => {
+            $("#tweet-text").val("");
+            $(".counter").val(140);
+            $(".error-container").css("border-color", "#f4f1ec");
+            $(".error-container").text("");
+            loadTweets();
+            
+          });
+      }
+      
     });
   };
   submitButton();
@@ -54,7 +73,13 @@ $(document).ready(function() {
       });
   };
   loadTweets();
-    
+
+  const escape = string => {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(string));
+    return div.innerHTML;
+  };
+
 });
 
 

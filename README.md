@@ -4,7 +4,7 @@ Tweeter page is SPA based on Twitter. in this Front-End concentrated project jQu
 
 ## Final Product
 
-!["Desktop Display"](https://github.com/mohdtorabi/tweeter/blob/master/public/images/Screen%20Shot%202020-11-19%20at%203.52.04%20PM.png)
+!["Desktop Display"](https://github.com/mohdtorabi/tweeter/blob/master/public/images/Screen%20Shot%202020-11-19%20at%203.51.59%20PM.png)
 !["New Tweet section and Hovering"](https://github.com/mohdtorabi/tweeter/blob/master/public/images/Screen%20Shot%202020-11-19%20at%203.54.31%20PM.png)
 !["Mobile Display"](https://github.com/mohdtorabi/tweeter/blob/master/public/images/Screen%20Shot%202020-11-19%20at%203.52.34%20PM.png)
 

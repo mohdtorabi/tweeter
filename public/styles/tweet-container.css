@@ -34,10 +34,16 @@ article:hover .tweet-account{
 }
 
 .header-img {
+
   height: 40px;
   width: 40px;
   padding: 0%;
-  margin: 20px;
+  margin-top: 0;
+}
+
+.image-name h3 {
+  margin-top: 0;
+  padding-left: 10px;
 }
 
 

@@ -17,7 +17,8 @@ main .newTweet {
 }
 
 .error-container {
-  border: solid #f4f1ec;
+  border: solid;
+  border-color: red;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   max-width: fit-content;

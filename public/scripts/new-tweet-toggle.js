@@ -3,7 +3,6 @@ $(document).ready(function() {
   const up = button.find("div").find(".up");
   const down = button.find("div").find(".down");
   const newTweet = $(".newTweet");
-  const text = newTweet.find("#tweet-box");
 
   newTweet.hide();
   up.hide();
@@ -13,7 +12,6 @@ $(document).ready(function() {
       down.hide();
       up.show();
       newTweet.slideDown(function() {
-        text.focus();
       });
       button.blur();
     } else {
@@ -23,4 +21,5 @@ $(document).ready(function() {
       button.blur();
     }
   });
+
 });

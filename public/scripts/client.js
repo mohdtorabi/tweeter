@@ -2,6 +2,7 @@
 const data = [];
 
 $(document).ready(function() {
+  $(".error-container").hide();
   const createTweetElement = (tweet) => {
     const $tweet = $(`
       <article class= "tweet">
@@ -42,19 +43,19 @@ $(document).ready(function() {
       const text = $("#tweet-text").val();
       if (text.length === 0) {
         $(".error-container").text("Error: Cannot post an empty tweet");
-        $(".error-container").css("border-color", "red");
-        
+        $(".error-container").show();
       } else if (text.length > 140) {
         $(".error-container").text("Error: Character limit exceeded");
-        $(".error-container").css("border-color", "red");
+        $(".error-container").show();
       } else {
         const dataEntry = $(this).serialize();
         $.ajax("/tweets/", {method : 'POST', data: dataEntry})
           .then(() => {
             $("#tweet-text").val("");
             $(".counter").val(140);
-            $(".error-container").css("border-color", "#f4f1ec");
-            $(".error-container").text("");
+            $(".error-container").hide();
+            $(".text-box").focus();
+
             loadTweets();
             
           });
@@ -91,7 +92,7 @@ const getDate = (milliseconds) => {
   let unit;
   if (time < 1000 * 60) {
     sum = Math.floor(time / (1000));
-    unit = "m";
+    unit = "s";
   } else if (time < 1000 * 60 * 60) {
     sum = Math.floor(time / (1000 * 60));
     unit = "m";

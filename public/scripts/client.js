@@ -83,23 +83,24 @@ $(document).ready(function() {
 });
 
 //get date function(instruction from stackoverflow)
-const getDate = milliseconds => {
+const getDate = (milliseconds) => {
   const datePosted = new Date(milliseconds);
   const dateNow = new Date().getTime();
   const time = Math.abs(dateNow - datePosted);
   let sum;
+  let unit;
   if (time < 1000 * 60) {
     sum = Math.floor(time / (1000));
-    unit = "S";
+    unit = "m";
   } else if (time < 1000 * 60 * 60) {
     sum = Math.floor(time / (1000 * 60));
     unit = "m";
-  } else if (time < 1000 * 60 * 60 * 60) {
+  } else if (time < 1000 * 60 * 60 * 24) {
     sum = Math.floor(time / (1000 * 60 * 60));
     unit = "h";
   } else {
-    sum = Math.floor(time / (1000 * 60 * 60 * 60));
-    unit = "d";
+    sum = Math.floor(time / (1000 * 60 * 60 * 24));
+    unit = 'd';
   }
   
   return `${sum} ${unit}`;

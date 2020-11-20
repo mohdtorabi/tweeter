@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter a SPA based on Twitter. in this Front-End concentrated project jQuery HTML5 and CSS3 was used along node JS and Express.
+Tweeter page is SPA based on Twitter. in this Front-End concentrated project jQuery HTML5 and CSS3 was used along node JS and Express.
 
 ## Final Product
 

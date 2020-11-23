@@ -3,7 +3,6 @@ $(document).ready(function() {
   const topButton = $(".back-to-top-button");
   const newTweet = $(".newTweet");
   const text = newTweet.find("#tweet-text");
-
   topButton.hide();
 
   $(document).scroll(function() {

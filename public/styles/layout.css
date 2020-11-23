@@ -43,6 +43,7 @@ body {
  }
 
  .back-to-top-button {
+  scroll-behaviour: smooth;
   position: fixed;
   height: fit-content;
   bottom: 15px;
